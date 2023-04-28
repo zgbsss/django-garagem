@@ -18,10 +18,11 @@ from django.urls import include, path
 
 from rest_framework.routers import DefaultRouter
 
-from garagem.views import CategoriaViewSet, MarcaViewSet
+from garagem.views import CategoriaViewSet, CorViewSet, MarcaViewSet
 
 router = DefaultRouter()
 router.register(r'categorias', CategoriaViewSet)
+router.register(r'cores', CorViewSet)
 router.register(r'marcas', MarcaViewSet)
 
 urlpatterns = [
