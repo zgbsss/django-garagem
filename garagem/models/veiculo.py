@@ -11,7 +11,7 @@ class Veiculo(models.Model):
     preco = models.DecimalField(
         max_digits=10, decimal_places=2, default=0, null=True, blank=True
     )
-    capa = models.ManyToManyField(Image, related_name="+", default=None)
+    capa = models.ManyToManyField(Image, related_name="+")
 
     def __str__(self):
         return f"{self.modelo} - {self.ano} - {self.cor}"
